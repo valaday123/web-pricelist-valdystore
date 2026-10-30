@@ -591,6 +591,38 @@ function observeReveal() {
   elements.forEach(element => {
     revealObserver.observe(element);
   });
+  // =========================
+// MODE TERANG DAN GELAP
+// =========================
+
+const themeToggle = document.getElementById("themeToggle");
+
+// Ambil tema yang tersimpan
+const savedTheme = localStorage.getItem("valdyStoreTheme");
+
+// Terapkan tema saat halaman dibuka
+if (savedTheme === "light") {
+  document.body.classList.add("light-mode");
+  themeToggle.textContent = "🌙";
+} else {
+  document.body.classList.remove("light-mode");
+  themeToggle.textContent = "☀️";
+}
+
+// Fungsi ganti tema
+themeToggle.addEventListener("click", function () {
+  document.body.classList.toggle("light-mode");
+
+  const isLightMode = document.body.classList.contains("light-mode");
+
+  if (isLightMode) {
+    themeToggle.textContent = "🌙";
+    localStorage.setItem("valdyStoreTheme", "light");
+  } else {
+    themeToggle.textContent = "☀️";
+    localStorage.setItem("valdyStoreTheme", "dark");
+  }
+});
 }
 
 // =============================================
