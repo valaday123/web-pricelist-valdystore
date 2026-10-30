@@ -601,39 +601,4 @@ loadSearchHistory();
 renderSearchHistory();
 renderSubcategories();
 renderProducts();
-// =================================
-// LIGHT MODE DAN DARK MODE
-// =================================
-
-const themeToggle = document.getElementById("themeToggle");
-
-// Membaca tema yang tersimpan
-const savedTheme = localStorage.getItem("valdyStoreTheme");
-
-// Mengatur tema saat halaman dibuka
-if (savedTheme === "light") {
-  document.body.classList.add("light-mode");
-  themeToggle.textContent = "🌙";
-} else {
-  document.body.classList.remove("light-mode");
-  themeToggle.textContent = "☀️";
-}
-
-// Event tombol tema
-themeToggle.addEventListener("click", function () {
-
-  document.body.classList.toggle("light-mode");
-
-  const isLightMode =
-    document.body.classList.contains("light-mode");
-
-  if (isLightMode) {
-    themeToggle.textContent = "🌙";
-    localStorage.setItem("valdyStoreTheme", "light");
-  } else {
-    themeToggle.textContent = "☀️";
-    localStorage.setItem("valdyStoreTheme", "dark");
-  }
-
-});
 observeReveal();
