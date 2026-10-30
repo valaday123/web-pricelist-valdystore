@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VALDY STORE - Premium Apps, Top Up Games dan Paket Internet.">
+  <title>VALDY STORE | Your Digital Partner</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#home" class="brand">
+      <img src="logo.jpg" alt="VALDY STORE" class="brand-logo">
+      <span class="brand-name">VALDY <span>STORE.</span></span>
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#kategori">Kategori</a>
+      <a href="#produk">Produk</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+
+    <a href="#produk" class="nav-button">Belanja Sekarang</a>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-content reveal">
+        <span class="eyebrow">WELCOME TO VALDY STORE</span>
+        <h1>Solusi Digital <span>Terbaik</span> Untuk Kamu.</h1>
+        <p>
+          Temukan aplikasi premium, top up game, dan paket internet
+          dengan proses pemesanan yang mudah dan praktis.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#produk" class="primary-button">Lihat Produk</a>
+          <a href="#kategori" class="secondary-button">Jelajahi Kategori</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-logo">
+          <img src="logo.jpg" alt="Logo VALDY STORE" class="home-logo">
+          <h2>VALDY STORE</h2>
+          <p>YOUR DIGITAL PARTNER</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="benefits reveal">
+      <div class="benefit">
+        <span>⚡</span>
+        <div>
+          <h3>Proses Praktis</h3>
+          <p>Pemesanan mudah dan cepat</p>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <span>🛍️</span>
+        <div>
+          <h3>Produk Beragam</h3>
+          <p>Banyak pilihan produk digital</p>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <span>💬</span>
+        <div>
+          <h3>Admin Support</h3>
+          <p>Hubungi admin untuk bantuan</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- KATEGORI -->
+    <section class="section" id="kategori">
+      <div class="section-heading reveal">
+        <span class="eyebrow">EXPLORE OUR STORE</span>
+        <h2>Kategori <span>Produk</span></h2>
+        <p>Pilih kategori produk yang kamu butuhkan.</p>
+      </div>
+
+      <div class="category-grid">
+        <button class="category-card reveal" data-category="premium">
+          <span>💎</span>
+          <h3>Premium Apps</h3>
+          <p>Aplikasi dan layanan premium</p>
+        </button>
+
+        <button class="category-card reveal" data-category="game">
+          <span>🎮</span>
+          <h3>Top Up Games</h3>
+          <p>Mobile Legends, Free Fire dan lainnya</p>
+        </button>
+
+        <button class="category-card reveal" data-category="internet">
+          <span>📶</span>
+          <h3>Paket Internet</h3>
+          <p>Telkomsel, Indosat, XL, Axis dan Tri</p>
+        </button>
+      </div>
+    </section>
+
+    <!-- PRODUK -->
+    <section class="section products-section" id="produk">
+      <div class="section-heading reveal">
+        <span class="eyebrow">OUR PRODUCTS</span>
+        <h2>Daftar <span>Produk</span></h2>
+        <p>Cari produk berdasarkan kategori, game, atau provider.</p>
+      </div>
+
+      <div class="product-controls reveal">
+
+        <!-- SEARCH -->
+        <div class="search-box">
+          <span class="search-icon">⌕</span>
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Cari produk, game, atau provider..."
+            autocomplete="off"
+            aria-label="Cari produk"
+          >
+        </div>
+
+        <!-- RIWAYAT -->
+        <div class="search-history">
+          <div class="history-header">
+            <div class="history-title">
+              <div class="history-icon">◷</div>
+              <div>
+                <h4>Riwayat Pencarian</h4>
+                <p>Produk yang pernah kamu cari</p>
+              </div>
+            </div>
+
+            <button type="button" id="clearHistory" class="clear-history">
+              Hapus Semua
+            </button>
+          </div>
+
+          <div class="history-list" id="historyList"></div>
+        </div>
+
+        <!-- FILTER KATEGORI -->
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-category="all">Semua</button>
+          <button class="filter-btn" data-category="premium">Premium Apps</button>
+          <button class="filter-btn" data-category="game">Games</button>
+          <button class="filter-btn" data-category="internet">Internet</button>
+        </div>
+
+        <!-- SUBKATEGORI -->
+        <div class="subcategory-wrapper" id="subcategoryWrapper" hidden>
+          <p class="subcategory-title" id="subcategoryTitle"></p>
+          <div class="subcategory-buttons" id="subcategoryButtons"></div>
+        </div>
+
+      </div>
+
+      <!-- DAFTAR PRODUK -->
+      <div class="product-grid" id="productList"></div>
+
+      <p class="empty-message" id="emptyMessage" hidden>
+        Produk tidak ditemukan. Coba kata kunci atau kategori lain.
+      </p>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="contact-section reveal" id="kontak">
+      <div>
+        <span class="eyebrow">NEED HELP?</span>
+        <h2>Butuh Bantuan <span>Pemesanan?</span></h2>
+        <p>
+          Hubungi admin VALDY STORE untuk informasi produk,
+          harga, dan pemesanan.
+        </p>
+      </div>
+
+      <a
+        href="#"
+        id="contactButton"
+        class="primary-button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Hubungi Admin
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#home" class="brand footer-brand">
+      <img src="logo.jpg" alt="Logo VALDY STORE" class="brand-logo">
+      <span class="brand-name">VALDY <span>STORE.</span></span>
+    </a>
+
+    <p>
+      © <span id="year"></span> VALDY STORE. Your Digital Partner.
+    </p>
+  </footer>
+
+</body>
+</html>
