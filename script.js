@@ -29,6 +29,8 @@ const products = [
   // MOBILE LEGENDS
 
   {name:"MLBB Weekly Diamond Pass",category:"game",description:"Weekly Diamond Pass",price:"Rp31.500",image:"ml.jpg"},
+  {name:"MLBB Starlight Basic",category:"game",description:"Starlight Basic Via Gift, Proses 8 Hari",price:"Rp38.000",image:"basic.jpg"},
+  {name:"MLBB Starlight Premium",category:"game",description:"Starlight Basic Via Gift, Proses 8 Hari",price:"Rp75.000",image:"premium.jpg"},
   {name:"MLBB 50+50 Diamond",category:"game",description:"Diamond untuk akun yang masih ada First TOPUP",price:"Rp17.000",image:"ml.jpg"},
   {name:"MLBB 150+150 Diamond",category:"game",description:"Diamond untuk akun yang masih ada First TOPUP",price:"Rp50.000",image:"ml.jpg"},
   {name:"MLBB 250+250 Diamond",category:"game",description:"Diamond untuk akun yang masih ada First TOPUP",price:"Rp82.000",image:"ml.jpg"},
