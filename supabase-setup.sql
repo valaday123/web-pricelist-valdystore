@@ -18,7 +18,7 @@ grant select on public.product_stock to anon, authenticated;
 
 -- Stok NULL berarti belum diatur. Konflik tidak akan menimpa stok yang sudah ada.
 insert into public.product_stock (product_id, product_name, stock) values
-  ('product-001', 'Netflix Premium', NULL),
+  ('product-001', 'Netflix Premium', 5),
   ('product-002', 'Netflix Premium', NULL),
   ('product-003', 'Canva Pro', NULL),
   ('product-004', 'YouTube Premium', NULL),
